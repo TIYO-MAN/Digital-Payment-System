@@ -69,4 +69,23 @@
     <!-- Fees Section -->
     <section class="fees">
       <p><strong>Registration Fee:</strong> 1000 ETB</p>
-      <p><strong>Tuition Fee:</strong>
+      <p><strong>Tuition Fee:</strong> 12,500 ETB</p>
+      <p><strong>Penalty:</strong> 0 ETB</p>
+      <hr>
+      <p class="total"><strong>Total:</strong> 13,500 ETB</p>
+    </section>
+
+    <!-- Proceed Button -->
+    <div class="proceed">
+      <button onclick="goToBank()">Proceed to Payment</button>
+    </div>
+  </div>
+
+  <script>
+    function goToBank() {
+      alert("Redirecting to bank selection...");
+      window.location.href = "bank.html"; // next page
+    }
+  </script>
+</body>
+</html>
