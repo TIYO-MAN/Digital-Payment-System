@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Bank</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="bank.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Bank</h1>
+    <div class="bank-list">
+      <!-- Awash Bank -->
+      <div class="bank-card" onclick="goNext('Awash Bank')">
+        <img src="awash.png" alt="Awash Bank Logo">
+        <p>Awash Bank</p>
+      </div>
+
+      <!-- Bank of Abyssinia -->
+      <div class="bank-card" onclick="goNext('Bank of Abyssinia')">
+        <img src="abyssinia.png" alt="Bank of Abyssinia Logo">
+        <p>Bank of Abyssinia</p>
+      </div>
+
+      <!-- Zemen Bank -->
+      <div class="bank-card" onclick="goNext('Zemen Bank')">
+        <img src="zemen.png" alt="Zemen Bank Logo">
+        <p>Zemen Bank</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goNext(bankName) {
+      alert("You selected " + bankName + ". Redirecting...");
+      window.location.href = "payment.html"; // next page
+    }
+  </script>
+</body>
+</html>
