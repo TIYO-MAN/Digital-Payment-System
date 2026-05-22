@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Request</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Payment Request</h1>
+    <p>Please enter your bank account number to receive the bill request.</p>
+
+    <!-- Bank Account Input -->
+    <form onsubmit="return sendBill()">
+      <input type="text" id="accountNumber" placeholder="Enter Bank Account Number" required>
+      <button type="submit">Send Bill Request</button>
+    </form>
+
+    <!-- Bill Sent Message -->
+    <p id="billMessage" class="hidden">✅ A bill has been sent to your bank account.</p>
+
+    <!-- Upload Proof -->
+    <div id="uploadSection" class="hidden">
+      <p>Please upload a screenshot or PDF of your paid bill:</p>
+      <input type="file" id="proofFile" accept=".png,.jpg,.jpeg,.pdf" required>
+      <button onclick="submitProof()">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    function sendBill() {
+      const acc = document.getElementById('accountNumber').value;
+      if(acc) {
+        document.getElementById('billMessage').classList.remove('hidden');
+        document.getElementById('uploadSection').classList.remove('hidden');
+      }
+      return false; // prevent page reload
+    }
+
+    function submitProof() {
+      const file = document.getElementById('proofFile').files[0];
+      if(file) {
+        alert("Proof submitted! Redirecting to confirmation...");
+        window.location.href = "confirmation.html"; // final page
+      } else {
+        alert("Please upload your proof file.");
+      }
+    }
+  </script>
+</body>
+</html>
