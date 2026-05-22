@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Confirmation</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Payment Confirmation</h1>
+    <p>Please wait... this may take a few minutes while we verify your payment.</p>
+
+    <!-- Result Section -->
+    <div id="result" class="hidden">
+      <h2 id="status"></h2>
+      <p id="details"></p>
+    </div>
+
+    <!-- Buttons to simulate accept/reject -->
+    <div class="actions">
+      <button onclick="acceptPayment()">Accept Payment</button>
+      <button onclick="rejectPayment()">Reject Payment</button>
+    </div>
+  </div>
+
+  <script>
+    function acceptPayment() {
+      document.getElementById('result').classList.remove('hidden');
+      document.getElementById('status').innerText = "✅ Payment Accepted";
+      document.getElementById('details').innerText = 
+        "Your payment has been verified successfully.";
+    }
+
+    function rejectPayment() {
+      document.getElementById('result').classList.remove('hidden');
+      document.getElementById('status').innerText = "❌ Payment Rejected";
+      document.getElementById('details').innerText = 
+        "No payment found with the provided Ref number or Transaction number.";
+    }
+  </script>
+</body>
+</html>
