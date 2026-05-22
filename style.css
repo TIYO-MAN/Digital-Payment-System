@@ -300,4 +300,45 @@ button:last-child:hover {
   font-size: 14px;
   color: #444;
 }
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  color: #555;
+}
+
+.hidden {
+  display: none;
+}
+
+.checkmark {
+  font-size: 60px;
+  color: green;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+h2 {
+  color: green;
+  margin-bottom: 10px;
+}
 
