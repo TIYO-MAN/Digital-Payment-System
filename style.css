@@ -50,6 +50,25 @@ button:hover {
   color: #666;
   margin-top: 10px;
 }
+/* CSS */
+.university-header {
+  text-align: center;      
+  margin-top: 20px;        
+}
+
+.university-logo {
+  width: 120px;             
+  height: auto;             
+  display: block;
+  margin: 0 auto;           
+}
+
+.university-name {
+  font-size: 2em;          
+  font-weight: bold;
+  margin-top: 10px;         
+}
+
 body2 {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
